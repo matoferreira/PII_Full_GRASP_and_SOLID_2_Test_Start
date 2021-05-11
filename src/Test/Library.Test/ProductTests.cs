@@ -5,21 +5,38 @@ namespace Library.Test
 {
     public class ProductTests
     {
+        private Product product;
+
         [SetUp]
         public void Setup()
         {
+            this.product = new Product("",1);
         }
 
         [Test]
-        //Test para product.description
-        //porbar que no sea nula
-        //probar que no sea vacia
-        //Test para unitcost
-        //probar que sea mayor o igual a 0
         
-        public void Test1()
+        public void TestDescripcionNoVacia()
         {
-            Assert.Pass();
+            product.Description = "Nombre";
+            Assert.IsNotEmpty(product.Description);
+        }
+
+        [Test]
+
+        public void TestDescripcionNoNULA()
+        {
+            Assert.IsNotNull(product.Description);
+        }
+
+        [Test]
+        public void TestUnitCostPositivoOCero()
+        {
+            Assert.IsTrue(product.UnitCost >= 0);
+        }
+        [Test]
+        public void TestCostCero()
+        {
+            Assert.IsTrue(product.UnitCost == 0, "TEST DEBE DAR ERROR si no unitcost es cero");
         }
     }
 }
