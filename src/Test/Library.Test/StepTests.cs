@@ -29,14 +29,14 @@ namespace Library.Test
 
         public void TestProductoNulo()
         {
-            Assert.IsNull(step.Input, "ESTE TEST DEBE DAR ERROR sino el product es NULL");
+            Assert.IsNull(step.Input, "ESTE TEST DEBE DAR ERROR si no el product es NULL");
         }
 
         [Test]
 
         public void TestEquipmentNulo()
         {
-            Assert.IsNull(step.Equipment, "ESTE TEST DEBE DAR ERROR sino el equipment es nulo");
+            Assert.IsNull(step.Equipment, "ESTE TEST DEBE DAR ERROR si no el equipment es nulo");
         }
 
         [Test]
@@ -62,8 +62,8 @@ namespace Library.Test
 
         [Test]
 
-        public void TestGetStepcostCorrecto() //Utilizo todos los valores como numeros primos xq x teo 
-                                              //Fundamentañl de la aritmetica el resultado de mult y sumas
+        public void TestGetStepcostCorrecto() //Utilizo todos los valores como números primos porque x teo 
+                                              //Fundamental de la aritmética el resultado de mult y sumas
                                               //de primos es único
         {
             product.UnitCost = 2;

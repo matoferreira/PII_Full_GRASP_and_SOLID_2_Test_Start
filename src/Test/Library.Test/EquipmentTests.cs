@@ -38,7 +38,7 @@ namespace Library.Test
 
         public void TestNombreVacio()
         {
-            Assert.IsEmpty(equipment.Description, "Test debe dar error o sino el nombre esta vacio");
+            Assert.IsEmpty(equipment.Description, "Test debe dar error o si no el nombre esta vacio");
         }
 
         [Test]
@@ -49,7 +49,7 @@ namespace Library.Test
         [Test]
         public void TestCostCero()
         {
-            Assert.IsTrue(equipment.HourlyCost == 0, "TEST DEBE DAR ERROR sino hourlycost es cero");
+            Assert.IsTrue(equipment.HourlyCost == 0, "TEST DEBE DAR ERROR si no hourlycost es cero");
         }
     }
 }
